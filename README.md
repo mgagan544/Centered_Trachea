@@ -89,6 +89,28 @@ Manages the **evaluation flow**, including:
 
 ---
 
+### `MCQButtonHandler_tt.cs`
+**Role:**
+Handles individual answer options for MCQ or audio classification
+
+**Usage:**
+-Four buttons in the UI (A, B, C, D)
+-Each button is assigned one MCQButtonHandler_tt instance
+
+**Key Fields:**
+-Eval_Script evalScript: reference to main logic script
+-string optionText: assigned when setting question options
+
+**Behavior:**
+SetOption(string option): sets the button label and cached value
+OnClick(): invokes Eval_Script.OnOptionSelected(optionText)
+
+**Setup Steps in Unity:**
+-Attach to each MCQ button (A, B, C, D)
+-Set evalScript reference
+-Eval_Script will dynamically assign the options during question flow
+
+
 ###  `SimpleTriggerDetector.cs`
 
 **Role:**  
