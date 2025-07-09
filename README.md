@@ -256,9 +256,4 @@ Assets/
 └── Scenes/
     └── CenteredTrachea.unity
 ```
-
 ---
----
-
-```
-
